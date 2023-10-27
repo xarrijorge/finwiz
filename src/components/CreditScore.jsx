@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -7,11 +7,8 @@ import Box from '@mui/material/Box';
 import GradingIcon from '@mui/icons-material/Grading';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { Link as NavLink } from 'react-router-dom';
 
-export default function CreateScore({createData}) {
-  const [record, setRecord] = useState({});
- 
+export default function CreateScore({ createData }) {
   return (
     <Container component='main' maxWidth='xs'>
       <CssBaseline />
@@ -63,7 +60,7 @@ export default function CreateScore({createData}) {
             autoComplete='expense'
           />
 
-         <span>
+          <span>
             <Button
               onClick={createData}
               fullWidth
@@ -72,7 +69,7 @@ export default function CreateScore({createData}) {
               Record
             </Button>
             <a href='/generate'>Go back to Home</a>
-            </span>
+          </span>
         </Box>
       </Box>
     </Container>
