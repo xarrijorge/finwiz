@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import GradingIcon from '@mui/icons-material/Grading';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { Link } from 'react-router-dom';
 
 export default function CreateScore({ createData }) {
   return (
@@ -59,17 +60,13 @@ export default function CreateScore({ createData }) {
             id='expense'
             autoComplete='expense'
           />
-
-          <span>
-            <Button
-              onClick={createData}
-              fullWidth
-              variant='contained'
-              sx={{ mt: 3, mb: 2 }}>
-              Record
-            </Button>
-            <a href='/generate'>Go back to Home</a>
-          </span>
+          <Button
+            onClick={createData}
+            fullWidth
+            variant='contained'
+            sx={{ mt: 3, mb: 2 }}>
+            <Link to='/generate'>Record</Link>
+          </Button>
         </Box>
       </Box>
     </Container>
